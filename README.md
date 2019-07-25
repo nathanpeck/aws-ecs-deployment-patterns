@@ -6,6 +6,10 @@ This is a visual guide to deployment options on Amazon EC2 Container Service. It
 
 In the following example ECS sees that the minimum healthy percentage is 100% so it can not stop any tasks until new tasks have been launched in parallel. So it starts a set of the new tasks and then stops the old tasks:
 
+Where, minimum healthy percentage refers to, looking in single instance and maximum is all the instances in the cluster.
+Where, minimum healthy percentage refers to, looking in single instance and maximum is all the instances in the cluster.
+Where, minimum healthy percentage refers to, looking in single instance and maximum is all the instances in the cluster.
+
 <img src="./images/parallel-deploy.png" width="43%" />
 
 AWS ECS always keeps a service within the defined healthy percentage in the deployment options. In this example there is not enough resources in the cluster to deploy the desired count of six new tasks in parallel with the desired count of six old tasks, so it takes several iterations of deploying a couple instances of the new task revision and then stopping a couple instances of the old task revision before ECS is able to fully roll out the new task revision:
